@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kairós es el planificador que convierte tu lista de pendientes en un plan realista: prioridades, agenda, modo enfoque y métricas honestas.">
+  <meta name="theme-color" content="#f4f0e8">
+  <title>Kairós · Tu semana, por fin, en su punto</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23191814'/%3E%3Ccircle cx='16' cy='16' r='8.5' fill='none' stroke='%23f4f0e8' stroke-width='2'/%3E%3Cpath d='M16 10v6l4 2.5' fill='none' stroke='%23e9c46a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/landing.css">
+  <script>document.documentElement.classList.add("js-anim");</script>
+</head>
+<body class="site">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-nav" id="siteNav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Kairós, inicio">
+        <span class="mark-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" width="20" height="20">
+            <circle cx="12" cy="12" r="8.2"></circle>
+            <path d="M12 7.4V12l3.4 2" stroke="#e9c46a"></path>
+          </svg>
+        </span>
+        <span>kairós<em>.</em></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="#producto">Producto</a>
+        <a href="#metodo">Método</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="nav-badge"><span class="dot"></span> Demo abierta</span>
+        <a class="btn btn-ghost btn-sm" href="acceso.html" id="loginLink">Entrar</a>
+        <button type="button" class="btn btn-primary btn-sm" data-demo>Probar la demo</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Planificación con intención</span>
+          <h1>Tu semana, por fin, <em>en su punto</em>.</h1>
+          <p class="hero-lead">
+            Kairós convierte la lista infinita de pendientes en un plan que sí puedes cumplir:
+            prioriza lo importante, protege tu atención y mide lo que avanzas.
+            Sin ruido. Sin culpa.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="acceso.html?mode=register">
+              Empezar gratis
+              <span data-icon="arrow-right"></span>
+            </a>
+            <button type="button" class="btn btn-ghost" data-demo>
+              <span data-icon="play"></span>
+              Explorar la demo
+            </button>
+          </div>
+
+          <div class="hero-note">
+            <span><span data-icon="check"></span> Sin instalar nada</span>
+            <span><span data-icon="lock"></span> Datos en tu navegador</span>
+            <span><span data-icon="clock"></span> 2 minutos para empezar</span>
+          </div>
+
+          <div class="hero-proof">
+            <div class="proof-avatars" aria-hidden="true">
+              <span>AR</span><span>LM</span><span>JT</span>
+            </div>
+            <p>Pensado para <strong>estudiantes, freelancers y equipos pequeños</strong> que quieren menos ruido y más hechos.</p>
+          </div>
+        </div>
+
+        <div class="hero-art reveal" aria-hidden="true">
+          <div class="app-mock">
+            <div class="mock-chrome">
+              <div class="mock-dots"><i></i><i></i><i></i></div>
+              <div class="mock-url">kairos.app / hoy</div>
+              <span style="width:34px"></span>
+            </div>
+            <div class="mock-body">
+              <div class="mock-side">
+                <span class="mini-logo"><span data-icon="clock"></span></span>
+                <i class="is-active"><span data-icon="sun"></span></i>
+                <i><span data-icon="calendar"></span></i>
+                <i><span data-icon="list"></span></i>
+                <i><span data-icon="target"></span></i>
+                <i><span data-icon="chart"></span></i>
+              </div>
+              <div class="mock-main">
+                <div class="mock-top">
+                  <div class="mock-hello">
+                    <small>Sábado, 24 de octubre</small>
+                    Buenas tardes, Ana.
+                  </div>
+                  <div class="mock-ring">
+                    <svg viewBox="0 0 100 100" width="46" height="46">
+                      <circle cx="50" cy="50" r="42" fill="none" stroke="var(--surface-3)" stroke-width="9"></circle>
+                      <circle cx="50" cy="50" r="42" fill="none" stroke="var(--accent)" stroke-width="9" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="197.9"></circle>
+                    </svg>
+                    <span>25%</span>
+                  </div>
+                </div>
+                <div class="mock-progress">
+                  <div class="bar"><i></i></div>
+                  <small><span>Semana · 68% del plan</span><span>6 días de racha</span></small>
+                </div>
+                <div class="mock-tasks">
+                  <div class="mock-task">
+                    <span class="mock-check"></span>
+                    <span class="mock-title">Entregar informe de práctica</span>
+                    <span class="mock-meta"><span class="mock-pill high">Alta</span>10:00</span>
+                  </div>
+                  <div class="mock-task">
+                    <span class="mock-check"></span>
+                    <span class="mock-title">Preparar presentación Kairós</span>
+                    <span class="mock-meta"><span class="mock-pill high">Alta</span>16:00</span>
+                  </div>
+                  <div class="mock-task">
+                    <span class="mock-check"></span>
+                    <span class="mock-title">Reunión con el equipo</span>
+                    <span class="mock-meta"><span class="mock-pill med">Media</span>15:30</span>
+                  </div>
+                  <div class="mock-task is-done">
+                    <span class="mock-check"><span data-icon="check"></span></span>
+                    <span class="mock-title">Planificar la semana</span>
+                    <span class="mock-meta"><span class="mock-pill done">Hecha</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card float-focus">
+            <div class="mini-label"><span>Enfoque</span><span class="mini-live"><i></i> En curso</span></div>
+            <div class="mini-time">24:12</div>
+            <div class="mini-task">Informe de práctica</div>
+            <div class="mini-track"><i></i></div>
+          </div>
+
+          <div class="float-card float-streak">
+            <span class="flame"><span data-icon="flame"></span></span>
+            <span><strong>6 días</strong><small>RACHA ACTIVA</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Captura sin fricción <b>✳</b></span>
+        <span>Prioridades reales <b>✳</b></span>
+        <span>Enfoque profundo <b>✳</b></span>
+        <span>Métricas honestas <b>✳</b></span>
+        <span>Agenda que respira <b>✳</b></span>
+        <span>Datos que son tuyos <b>✳</b></span>
+        <span>Captura sin fricción <b>✳</b></span>
+        <span>Prioridades reales <b>✳</b></span>
+        <span>Enfoque profundo <b>✳</b></span>
+        <span>Métricas honestas <b>✳</b></span>
+        <span>Agenda que respira <b>✳</b></span>
+        <span>Datos que son tuyos <b>✳</b></span>
+      </div>
+    </div>
+
+    <section class="section statement" id="producto">
+      <div class="container statement-grid">
+        <div class="reveal">
+          <span class="eyebrow">El problema</span>
+          <h2 style="margin-top:16px">Las listas guardan pendientes. Kairós te ayuda a decidir qué hacer con ellos.</h2>
+        </div>
+        <div class="statement-copy reveal">
+          <p>La mayoría de las apps de productividad te dan más funciones, más pestañas y más ruido. Terminas administrando la herramienta en lugar de tu tiempo. Nosotros partimos de una pregunta simple: <strong>¿qué merece tu próxima hora?</strong></p>
+          <p>Kairós reduce el día a tres movimientos: capturar lo que tienes en la cabeza, ordenarlo por fecha e impacto, y proteger un bloque de enfoque para hacerlo de verdad. Lo demás es decoración.</p>
+          <div class="pull-quote">“No necesitas más horas. Necesitas decidir a qué hora importa lo que haces.”</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">El producto</span>
+          <h2>Todo lo que necesitas. <em>Nada que sobre.</em></h2>
+          <p>Una interfaz que se entiende en segundos y un método que se sostiene en el tiempo.</p>
+        </div>
+
+        <div class="bento">
+          <article class="bento-card span-3 reveal">
+            <span class="bento-icon"><span data-icon="layers"></span></span>
+            <div class="bento-visual">
+              <div class="mini-list">
+                <div class="mini-row">
+                  <span class="box"></span><span class="line"></span><span class="tag"></span>
+                </div>
+                <div class="mini-row">
+                  <span class="box"></span><span class="line"></span><span class="tag med"></span>
+                </div>
+                <div class="mini-row is-done">
+                  <span class="box"></span><span class="line"></span><span class="tag low"></span>
+                </div>
+              </div>
+            </div>
+            <h3>Prioridad con criterio</h3>
+            <p>Tres niveles —alta, media y baja— y una fecha realista. Lo urgente deja de tapar lo importante.</p>
+          </article>
+
+          <article class="bento-card span-3 dark reveal">
+            <span class="bento-icon"><span data-icon="target"></span></span>
+            <div class="timer-visual">
+              <div class="timer-dial">
+                <svg viewBox="0 0 100 100" width="82" height="82">
+                  <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="5"></circle>
+                  <circle cx="50" cy="50" r="42" fill="none" stroke="#e9c46a" stroke-width="5" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="66"></circle>
+                </svg>
+                <span>24:12</span>
+              </div>
+              <div class="timer-lines"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+            </div>
+            <h3>Modo enfoque real</h3>
+            <p>Un temporizador Pomodoro conectado a una tarea concreta. 25 minutos, una sola cosa, cero pestañas.</p>
+          </article>
+
+          <article class="bento-card span-2 reveal">
+            <span class="bento-icon"><span data-icon="sun"></span></span>
+            <div class="bento-visual ring-visual">
+              <div class="dial">
+                <svg viewBox="0 0 100 100" width="66" height="66">
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="var(--surface-3)" stroke-width="8"></circle>
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" stroke-dasharray="251.3" stroke-dashoffset="125.7"></circle>
+                </svg>
+                <b>50%</b>
+              </div>
+              <ul>
+                <li><i></i> 3 para hoy</li>
+                <li><i style="background:var(--line-strong)"></i> 2 completadas</li>
+              </ul>
+            </div>
+            <h3>Hoy, sin ruido</h3>
+            <p>Una vista que muestra solo lo que toca: atrasadas, de hoy y lo ya hecho.</p>
+          </article>
+
+          <article class="bento-card span-2 reveal">
+            <span class="bento-icon"><span data-icon="calendar"></span></span>
+            <div class="bento-visual mini-cal" aria-hidden="true">
+              <i></i><i></i><i class="has"></i><i></i><i class="has-strong"></i><i></i><i></i>
+              <i></i><i class="has"></i><i></i><i></i><i class="today"></i><i class="has"></i><i></i>
+              <i class="has"></i><i></i><i class="has"></i><i></i><i></i><i class="has-strong"></i><i></i>
+            </div>
+            <h3>Agenda que respira</h3>
+            <p>Un calendario mensual para ver la carga antes de que se vuelva urgente.</p>
+          </article>
+
+          <article class="bento-card span-2 reveal">
+            <span class="bento-icon"><span data-icon="chart"></span></span>
+            <div class="bento-visual">
+              <div class="mini-chart" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <h3>Métricas honestas</h3>
+            <p>Racha, cumplimiento y minutos de enfoque. Datos para decidir, no para castigarte.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method" id="metodo">
+      <div class="container">
+        <div class="method-head">
+          <div class="section-head reveal">
+            <span class="eyebrow">El método</span>
+            <h2>Tres pasos. <em>Nada más.</em></h2>
+          </div>
+          <p class="reveal" style="max-width:320px;font-size:13.5px;color:var(--ink-3);line-height:1.6">Inspirado en el Pomodoro de Francesco Cirillo y en la matriz de prioridades de Eisenhower. Simple, probado, sostenible.</p>
+        </div>
+        <div class="method-grid">
+          <div class="step reveal">
+            <span class="step-num">01</span>
+            <h3>Captura</h3>
+            <p>Todo sale de tu cabeza y entra en un solo lugar. Sin fricción, sin decidir todavía.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">02</span>
+            <h3>Prioriza</h3>
+            <p>Ordena por fecha e impacto. No por culpa. Lo que no importa esta semana puede esperar.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">03</span>
+            <h3>Enfoca</h3>
+            <p>Bloques de 25 minutos con una sola tarea en pantalla. Después, descansa de verdad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="preguntas">
+      <div class="container faq-grid">
+        <div class="section-head reveal">
+          <span class="eyebrow">Preguntas</span>
+          <h2>Antes de <em>empezar</em>.</h2>
+          <p>Lo esencial, sin letra pequeña.</p>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>¿Kairós es gratis? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">Sí. Es un proyecto académico y la demo está abierta para que la pruebes sin registro. Puedes crear una cuenta local o entrar con la cuenta de demostración.</div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Dónde se guardan mis datos? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">En este MVP, todo se guarda en el <strong>almacenamiento local de tu navegador</strong>. No viaja a ningún servidor. Puedes exportar un respaldo en JSON desde Ajustes y también importarlo en otro navegador.</div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Necesito crear una cuenta? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">No para probar: la demo entra con un clic y trae datos de ejemplo. Si quieres tu propio espacio limpio, crea una cuenta en segundos. Puedes empezar sin correo real, aunque no habrá recuperación de contraseña.</div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Funciona en el celular? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">Sí. La interfaz es responsive y el temporizador de enfoque se adapta a pantallas pequeñas. Para la demo en vivo recomendamos una laptop, pero puedes revisarla desde el teléfono.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-wrap">
+      <div class="container">
+        <section class="cta-band reveal">
+          <div>
+            <h2>Tu próxima hora puede ser <em>distinta</em>.</h2>
+            <p>Entra a la demo con datos reales de ejemplo y compruébalo en menos de dos minutos. Sin tarjeta, sin instalar, sin promesas raras.</p>
+          </div>
+          <div class="cta-actions">
+            <button type="button" class="btn btn-cream" data-demo>
+              Abrir la demo
+              <span data-icon="arrow-right"></span>
+            </button>
+            <a class="btn btn-outline-light" href="acceso.html?mode=register">Crear mi cuenta</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="mark-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" width="20" height="20">
+                <circle cx="12" cy="12" r="8.2"></circle>
+                <path d="M12 7.4V12l3.4 2" stroke="#e9c46a"></path>
+              </svg>
+            </span>
+            <span>kairós<em>.</em></span>
+          </a>
+          <p>Un planificador con intención, construido como proyecto de Prácticas Profesionalizantes. HTML, CSS y JavaScript, sin frameworks.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <ul>
+            <li><a href="#" data-demo>Demo interactiva</a></li>
+            <li><a href="acceso.html">Iniciar sesión</a></li>
+            <li><a href="acceso.html?mode=register">Crear cuenta</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Proyecto</h4>
+          <ul>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 <strong>Equipo Kairós</strong> · Prácticas Profesionalizantes</span>
+        <span>Proyecto académico · Demo sin costo · Hecho a mano con HTML, CSS y JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-root" id="toastRoot" aria-live="polite"></div>
+
+  <script src="assets/js/icons.js" defer></script>
+  <script src="assets/js/store.js" defer></script>
+  <script src="assets/js/ui.js" defer></script>
+  <script src="assets/js/landing.js" defer></script>
+</body>
+</html>

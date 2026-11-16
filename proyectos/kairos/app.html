@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kairós — planificador de tareas con prioridades, agenda y modo enfoque. Organiza tu semana con intención.">
+  <meta name="theme-color" content="#f4f0e8">
+  <title>Kairós · Mi espacio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23191814'/%3E%3Ccircle cx='16' cy='16' r='8.5' fill='none' stroke='%23f4f0e8' stroke-width='2'/%3E%3Cpath d='M16 10v6l4 2.5' fill='none' stroke='%23e9c46a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="app-body">
+  <a class="skip-link" href="#viewRoot">Saltar al contenido</a>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <div class="sidebar-head">
+        <a class="brand" href="index.html" aria-label="Kairós, ir al inicio">
+          <span class="mark-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" width="20" height="20">
+              <circle cx="12" cy="12" r="8.2"></circle>
+              <path d="M12 7.4V12l3.4 2" stroke="#e9c46a"></path>
+            </svg>
+          </span>
+          <span>kairós<em>.</em></span>
+        </a>
+        <button type="button" class="icon-btn sidebar-close" id="sidebarClose" aria-label="Cerrar menú">&#10005;</button>
+      </div>
+
+      <nav class="side-nav" aria-label="Vistas">
+        <button type="button" class="nav-item" data-view="hoy">
+          <span data-icon="sun"></span> Hoy <span class="nav-count" data-count="today"></span>
+        </button>
+        <button type="button" class="nav-item" data-view="proximas">
+          <span data-icon="calendar"></span> Próximas <span class="nav-count" data-count="upcoming"></span>
+        </button>
+        <button type="button" class="nav-item" data-view="todas">
+          <span data-icon="list"></span> Todas <span class="nav-count" data-count="pending"></span>
+        </button>
+        <button type="button" class="nav-item" data-view="completadas">
+          <span data-icon="check"></span> Completadas
+        </button>
+      </nav>
+
+      <div class="nav-divider"></div>
+
+      <nav class="side-nav" aria-label="Herramientas">
+        <button type="button" class="nav-item" data-view="calendario">
+          <span data-icon="grid"></span> Calendario
+        </button>
+        <button type="button" class="nav-item" data-view="enfoque">
+          <span data-icon="target"></span> Enfoque
+        </button>
+        <button type="button" class="nav-item" data-view="estadisticas">
+          <span data-icon="chart"></span> Estadísticas
+        </button>
+      </nav>
+
+      <div class="nav-divider"></div>
+
+      <div class="side-section">
+        <h2>Espacios</h2>
+        <button type="button" id="addProjectBtn" aria-label="Crear un espacio" title="Crear espacio">
+          <span data-icon="plus"></span>
+        </button>
+      </div>
+      <div class="project-nav" id="projectNav"></div>
+
+      <div class="sidebar-spacer"></div>
+
+      <div class="streak-card" id="streakCard" aria-label="Racha de constancia"></div>
+
+      <div class="user-card" id="userCard" role="button" tabindex="0" aria-haspopup="menu" aria-expanded="false">
+        <span class="user-avatar" id="userAvatar">AR</span>
+        <span class="user-copy">
+          <strong id="userName">Ana Rivera</strong>
+          <small id="userEmail">demo@kairos.app</small>
+        </span>
+        <span data-icon="chevron-up" class="chevron"></span>
+      </div>
+
+      <div class="user-menu" id="userMenu" role="menu" hidden>
+        <div class="user-menu-head">
+          <strong id="userMenuName">Ana Rivera</strong>
+          <small id="userMenuEmail">demo@kairos.app</small>
+        </div>
+        <button type="button" role="menuitem" data-action="open-settings"><span data-icon="settings"></span> Ajustes</button>
+        <button type="button" role="menuitem" data-action="export-data"><span data-icon="download"></span> Exportar mis datos</button>
+        <button type="button" role="menuitem" class="danger" data-action="logout"><span data-icon="logout"></span> Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <header class="topbar">
+        <button type="button" class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menú" aria-controls="sidebar" aria-expanded="false">
+          <span data-icon="menu"></span>
+        </button>
+        <div class="topbar-title">
+          <h1 id="viewTitle">Hoy</h1>
+          <p id="viewDate"></p>
+        </div>
+        <div class="topbar-spacer"></div>
+
+        <label class="topbar-search" for="searchInput">
+          <span data-icon="search"></span>
+          <input type="search" id="searchInput" placeholder="Buscar tareas…" autocomplete="off" aria-label="Buscar tareas">
+          <span class="kbd search-kbd">/</span>
+        </label>
+
+        <div class="topbar-actions">
+          <button type="button" class="icon-btn" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">
+            <span data-icon="moon"></span>
+          </button>
+
+          <div class="notif-wrap">
+            <button type="button" class="icon-btn notif-btn" id="notifBtn" aria-label="Recordatorios" aria-expanded="false" aria-controls="notifPanel">
+              <span data-icon="bell"></span>
+              <span class="badge-dot" id="notifBadge"></span>
+            </button>
+            <div class="notif-panel" id="notifPanel" hidden>
+              <div class="notif-head">
+                <h2>Recordatorios</h2>
+                <span id="notifCount"></span>
+              </div>
+              <div class="notif-body" id="notifBody"></div>
+              <div class="notif-foot">
+                <button type="button" id="notifGoToday">Ver mi día de hoy</button>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary" id="newTaskBtn">
+            <span data-icon="plus"></span>
+            <span class="btn-label">Nueva tarea</span>
+            <span class="kbd">N</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="view-root" id="viewRoot" tabindex="-1">
+        <div class="view-inner" id="viewInner"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+  <div id="modalRoot"></div>
+  <div class="toast-root" id="toastRoot" aria-live="polite"></div>
+
+  <noscript>
+    <div style="padding:40px;text-align:center;font-family:sans-serif">
+      Kairós necesita JavaScript para funcionar. Actívalo en tu navegador y recarga la página.
+    </div>
+  </noscript>
+
+  <script src="assets/js/icons.js" defer></script>
+  <script src="assets/js/store.js" defer></script>
+  <script src="assets/js/ui.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
